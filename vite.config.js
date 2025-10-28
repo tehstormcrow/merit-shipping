@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/https://tehstormcrow.github.io/merit-shipping/"
+      : "/",
+  plugins: [tailwindcss()],
 });
