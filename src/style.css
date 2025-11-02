@@ -22,6 +22,15 @@
 body {
   @apply text-gray-700;
 }
+
+/* fix for navbar link jumping */
+html, 
+section,
+footer {
+  scroll-margin-top: 180px; /* simpler version, modern browsers */
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
@@ -127,6 +136,10 @@ h3 {
 
 /* 002-TOP-CONTACT */
 /* ======================================================================= */
+.header--container {
+  @apply w-full fixed top-0 left-0 z-50;
+}
+
 .top-contact {
   background: var(--color-primary);
   @apply text-xs text-white;
@@ -159,17 +172,27 @@ h3 {
 }
 
 .navigation--container {
-  @apply grid grid-cols-7 gap-4 max-w-4xl m-auto text-base;
+  @apply relative max-w-4xl m-auto px-6;
+  @apply flex justify-between items-center md:gap-4;
 }
 
 .navigation--link, .navigation--logo {
-  @apply flex items-center justify-self-center py-2 text-sm font-medium text-gray-600 hover:text-gray-900 cursor-pointer self-center justify-center;
+  @apply flex items-center justify-self-center py-2 text-sm font-medium;
+  @apply text-gray-600 hover:text-gray-900 cursor-pointer self-center justify-center;
+}
 
+.navigation--logo img,
+.navigation--mobile-logo img {
+  @apply h-20 py-2;
 }
 
 .navigation--link.active {
   border-bottom: 3px solid var(--color-primary);
   @apply text-gray-900;
+}
+
+.mobile-menu-button {
+  @apply text-gray-500 hover:text-gray-900;
 }
 
 /* 003-NAVIGATION/END */
@@ -178,7 +201,9 @@ h3 {
 /* 004-HERO */
 /* ======================================================================= */
 .hero {
-  @apply my-24 mx-auto sm:max-w-lg text-center;
+  @apply mt-72;
+  @apply mb-32;
+  @apply mx-auto sm:max-w-lg text-center;
   @apply px-6 sm:px-0;
 }
 

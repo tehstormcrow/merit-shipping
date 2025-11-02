@@ -10,48 +10,74 @@
 </head>
 
 <body>
-  <!-- TOP CONTACT -->
-  <div class="top-contact">
-    <div class="top-contact--container">
-      <div class="top-contact--info">
-        <span class="top-contact--info-title">General Inquiries</span>
-        <a class="top-contact--info-link" href="mailto:info@meritshipping.net">info@meritshipping.net</a>
-      </div>
-      <div class="top-contact--info text-right">
-        <span class="top-contact--info-title">Crew Applications</span>
-        <a class="top-contact--info-link" href="mailto:cv@meritshipping.net">cv@meritshipping.net</a>
+  <div class="header--container">
+    <!-- TOP CONTACT -->
+    <div class="top-contact">
+      <div class="top-contact--container">
+        <div class="top-contact--info">
+          <span class="top-contact--info-title">General Inquiries</span>
+          <a class="top-contact--info-link" href="mailto:info@meritshipping.net">info@meritshipping.net</a>
+        </div>
+        <div class="top-contact--info text-right">
+          <span class="top-contact--info-title">Crew Applications</span>
+          <a class="top-contact--info-link" href="mailto:cv@meritshipping.net">cv@meritshipping.net</a>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- TOP CONTACT/END -->
+    <!-- TOP CONTACT/END -->
 
-  <!-- TODO: make mobile friendly-->
-  <!-- TODO: add whatsapp icon -->
-  <!-- TODO: add fleet -->
-  <!-- TODO: make the active item change, as you move within page on different heights -->
-  <!-- NAVIGATION -->
-  <div class="navigation">
-    <div class="navigation--container">
-      <a href="#hero" class="navigation--link active">Home</a>
-      <a href="#mission" class="navigation--link">Mission</a>
-      <a href="#fleet" class="navigation--link">Fleet</a>
-      <a href="#hero" class="navigation--logo"><img src="/merit-logo-full.png" alt="" srcset=""></a>
-      <a href="#services" class="navigation--link">Services</a>
-      <a href="#why-us" class="navigation--link">Why Us?</a>
-      <a href="#footer" class="navigation--link">Contact</a>
+    <!-- TODO: add whatsapp icon -->
+    <!-- TODO: add fleet -->
+    <!-- TODO: make the active item change, as you move within page on different heights -->
+    <!-- NAVIGATION -->
+    <div class="navigation">
+      <div class="navigation--container">
+        <!-- Mobile Navigation -->
+        <a href="#hero" class="navigation--mobile-logo md:hidden">
+          <img src="/merit-logo-full.png" alt="Merit Shipping Logo">
+        </a>
+
+        <button class="mobile-menu-button md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:justify-between md:w-full">
+          <a href="#hero" class="navigation--link active">Home</a>
+          <a href="#mission" class="navigation--link">Mission</a>
+          <a href="#fleet" class="navigation--link">Fleet</a>
+          <a href="#hero" class="navigation--logo">
+            <img src="/merit-logo-full.png" alt="Merit Shipping Logo">
+          </a>
+          <a href="#services" class="navigation--link">Services</a>
+          <a href="#why-us" class="navigation--link">Why Us?</a>
+          <a href="#footer" class="navigation--link">Contact</a>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="mobile-menu hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg">
+          <a href="#mission" class="block py-4 px-6 hover:bg-gray-50">Mission</a>
+          <a href="#fleet" class="block py-4 px-6 hover:bg-gray-50">Fleet</a>
+          <a href="#services" class="block py-4 px-6 hover:bg-gray-50">Services</a>
+          <a href="#why-us" class="block py-4 px-6 hover:bg-gray-50">Why Us?</a>
+          <a href="#footer" class="block py-4 px-6 hover:bg-gray-50">Contact</a>
+        </div>
+      </div>
     </div>
+    <!-- NAVIGATION/END -->
   </div>
-  <!-- NAVIGATION/END -->
 
   <!-- HERO -->
-  <div id="hero" class="hero">
+  <section id="hero" class="hero">
     <h1>Independent <span>Ship & Crew</span> Management</h1>
     <p>reliable, innovative, and solution-oriented approach merged with 20+ years of experience.</p>
     <div class="hero--cta">
       <a href="mailto:info@meritshipping.net" class="btn btn-primary">Consult Us</a>
       <div class="btn btn-ghost">Apply Crew</div>
     </div>
-  </div>
+  </section>
   <!-- HERO/END -->
 
   <!-- MISSION -->
@@ -246,7 +272,7 @@
   <!-- FOOTER/END -->
 
 
-
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
