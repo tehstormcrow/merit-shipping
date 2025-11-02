@@ -12,6 +12,7 @@
   006-SERVICES
   007-WHY US
   008-FOOTER
+  009-SOCIAL ICONS
 */
 
   /* 000-CSS RESET */
@@ -393,4 +394,42 @@ h3 {
 }
 
 /* 008-FOOTER/END */
+/* ======================================================================= */
+
+/* 009-SOCIAL ICONS */
+/* ======================================================================= */
+.social-icons {
+  @apply fixed bottom-8 right-8 z-50 flex flex-col gap-4;
+}
+
+.social-icon {
+  @apply flex items-center justify-center w-12 h-12 rounded-full shadow-lg transition-transform hover:scale-110;
+  animation: bounce .9s infinite;
+}
+
+.social-icon svg {
+  @apply w-6 h-6;
+}
+
+.social-icon.whatsapp {
+  background-color: #25D366;
+  @apply text-white;
+}
+
+.social-icon.linkedin {
+  background-color: #0077B5;
+  @apply text-white;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+/* 009-SOCIAL ICONS/END */
 /* ======================================================================= */
