@@ -11,6 +11,9 @@ on:
 
 jobs:
   build:
+    environment:
+      name: github-pages
+      NODE_ENV: production
 
     runs-on: ubuntu-latest
 
