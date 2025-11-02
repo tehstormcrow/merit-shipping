@@ -49,12 +49,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .container {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  @apply w-full md:w-[46rem] lg:w-[62rem] xl:w-[78rem] m-auto;
 }
+
 /* CSS RESET/END */
 /* ======================================================================= */
 
@@ -207,8 +204,8 @@ h3 {
 }
 
 .mission--content {
-  @apply p-24 text-white;
-  max-width: 800px;
+  @apply ml-20 text-white ;
+  @apply w-full md:max-w-[20rem] lg:max-w-[48rem] xl:max-w-[64rem] m-auto;
 }
 
 .mission--text span {
@@ -217,6 +214,10 @@ h3 {
 
 .mission--title {
   @apply text-white font-black mb-4;
+}
+
+.mission--image > img {
+  display: block;
 }
 
 /* 005-MISSION/END */
@@ -280,6 +281,7 @@ h3 {
   background-size: cover;
   background-position: center top;
   @apply text-white py-12 mt-24 font-light;
+
 }
 
 .footer p {
@@ -288,6 +290,29 @@ h3 {
 
 .footer--links li {
   @apply mb-2;
+}
+
+.footer--inner {
+  @apply w-full xl:w-[78rem] px-12 xl:m-auto;
+}
+
+.footer--container {
+  @apply grid grid-cols-3 md:grid-cols-5 gap-8;
+  @apply grid-flow-row;
+}
+
+.footer--info {
+  @apply col-span-2 md:col-span-2 xl:col-span-2;
+}
+
+.footer--links {
+  @apply col-span-1;
+}
+
+
+.footer--contact {
+  @apply col-span-3 md:col-span-2 xl:col-span-2;
+  @apply  grid grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-8;
 }
 
 
