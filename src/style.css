@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container {
   @apply w-full md:w-[46rem] lg:w-[62rem] xl:w-[78rem] m-auto;
+  @apply px-6 md:px-0;
 }
 
 /* CSS RESET/END */
@@ -253,7 +254,11 @@ h3 {
 /* 007-WHY US */
 /* ======================================================================= */
 .why-us {
-  @apply flex justify-between my-24;
+  @apply grid xl:grid-cols-2 my-24 text-center xl:text-left;
+}
+
+.why-us--image {
+  @apply mb-8 xl:mb-0 self-center max-xl:justify-self-center;
 }
 
 .why-us--content p {
@@ -302,17 +307,25 @@ h3 {
 }
 
 .footer--info {
-  @apply col-span-2 md:col-span-2 xl:col-span-2;
+  @apply col-span-3 sm:col-span-2 md:col-span-2 xl:col-span-2 order-1 sm:order-2;
+  @apply max-sm:justify-self-center max-sm:text-center;
+}
+
+.footer--info img {
+  @apply max-sm:mx-auto;
 }
 
 .footer--links {
-  @apply col-span-1;
+  @apply col-span-3 sm:col-span-1 order-2;
+  @apply max-sm:justify-self-center max-sm:text-center;
 }
 
 
 .footer--contact {
   @apply col-span-3 md:col-span-2 xl:col-span-2;
-  @apply  grid grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-8;
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-8;
+  @apply max-sm:justify-self-center max-sm:text-center;
+  @apply order-3;
 }
 
 
@@ -325,7 +338,7 @@ h3 {
 }
 
 .footer--contact div {
-  @apply mb-8;
+  @apply mb-4 md:mb-8;
 }
 
 .footer--contact-title {
@@ -338,6 +351,10 @@ h3 {
 
 .footer--divider {
   @apply  border-white opacity-20 my-2;
+}
+
+.footer--copyright {
+  @apply max-sm:text-center;
 }
 
 /* 008-FOOTER/END */
